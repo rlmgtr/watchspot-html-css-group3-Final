@@ -1,6 +1,7 @@
 @import './common';
 @import './example';
-@import './test';
+@import'./hero';
+@import'./index';
 
 body {
     font-family: "Epilogue", sans-serif;
@@ -182,6 +183,5 @@ header {
       .x-button {
         cursor: pointer;
       }
-      
 
 }
