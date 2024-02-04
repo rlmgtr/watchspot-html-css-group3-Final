@@ -247,8 +247,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  height: 694px;
+  height: auto;
   background-color: white;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -259,9 +258,6 @@ img {
 }
 
 .form-align {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
   width: 100%;
 }
 
@@ -271,6 +267,7 @@ img {
 
 .modal-first {
   margin-top: 26;
+  margin-bottom: 40px;
 }
 
 .modal-img {
@@ -352,6 +349,12 @@ img {
   .modal-pop-up {
     max-width: 768px;
     display: flex;
+  }
+
+  .form-align {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
   }
 }
 
