@@ -1,3 +1,7 @@
+ /* Styles for screens larger than 1023px (desktop) */
+ @media (min-width: 1024px) {
+    /* Add your desktop styles here */
+  }
 .about-us {
     flex: 1;
     position: relative;
@@ -221,7 +225,4 @@
     }
   }
   
-  /* Styles for screens larger than 1023px (desktop) */
-  @media (min-width: 1024px) {
-    /* Add your desktop styles here */
-  }
+ 
