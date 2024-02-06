@@ -200,3 +200,8 @@ header {
     height: 750px;
   }
 }
+@media screen and (max-width: 450px) {
+  .title {
+    flex-wrap: nowrap;
+  }
+}
