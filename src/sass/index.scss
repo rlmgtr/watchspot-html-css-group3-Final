@@ -187,8 +187,16 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  .watch-list {
+  .watchs-list {
     display: grid;
     width: 50%;
+  }
+  .sec-4 {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sec-4 {
+    height: 750px;
   }
 }
