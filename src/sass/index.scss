@@ -1,8 +1,5 @@
 @import './aboutus';
 @import './common';
-@import './hero';
-@import './catalog';
-@import './sale';
 
 body {
   font-family: 'Epilogue', sans-serif;
@@ -184,3 +181,11 @@ header {
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .watch-list {
+    display: grid;
+    width: 100%;
+  }
+}
+
