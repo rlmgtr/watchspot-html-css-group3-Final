@@ -1,12 +1,9 @@
-
 @import './common';
 @import './hero';
 @import './aboutus';
 @import './catalog';
 @import './feature';
 @import './sale';
-
-
 
 body {
   font-family: 'Epilogue', sans-serif;
@@ -190,9 +187,21 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  .watch-list {
+  .watchs-list {
     display: grid;
-    width: 100%;
+    width: 50%;
+  }
+  .sec-4 {
+    width: 40%;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .sec-4 {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .title {
+    flex-wrap: nowrap;
+  }
+}

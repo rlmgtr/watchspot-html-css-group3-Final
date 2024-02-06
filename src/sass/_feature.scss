@@ -4,15 +4,14 @@
 }
 
 .sec-4 {
-  padding: 80px 132px;
-  width: 100%;
-  height: 779px;
+  padding: 40px;
+  width: 50%;
 }
 .title {
   font-family: Epilogue;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 14px;
+  line-height: 12px;
   letter-spacing: 0.06em;
   text-align: left;
   margin: auto;
@@ -20,7 +19,7 @@
 
 .new-watch {
   width: 1176;
-  height: 400px;
+  height: 1100px;
   margin: auto;
   justify-content: center;
   padding-top: 8px;
@@ -39,7 +38,7 @@
   letter-spacing: -0.02em;
   color: #1e2827;
 }
-.watch-list {
+.watchs-list {
   display: flex;
   list-style: none;
   gap: 24px;
@@ -49,4 +48,10 @@
 .green-bronze {
   width: 576;
   height: 422;
+}
+.features {
+  width: 1428px;
+  height: auto;
+  left: 0;
+  text-align: left;
 }
