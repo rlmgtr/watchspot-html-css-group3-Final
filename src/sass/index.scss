@@ -1,7 +1,6 @@
+@import './aboutus';
 @import './common';
-@import './example';
-@import './test';
-@import './feature';
+
 body {
   font-family: 'Epilogue', sans-serif;
 }
@@ -182,9 +181,11 @@ header {
     cursor: pointer;
   }
 }
+
 @media screen and (max-width: 767px) {
   .watch-list {
     display: grid;
     width: 100%;
   }
 }
+

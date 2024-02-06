@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  object-fit: cover;
+}
+
+.mobile-hidden.watch-item {
+  display: none;
+}
+
+.catalog-container {
+  padding: 0 32px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.catalog-header {
+  width: 100%;
+  max-width: 450px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1e2827;
+}
+.watch-img {
+  width: 276px;
+  height: 274px;
+}
+
+.watch-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.watch-item {
+  flex-basis: calc((100% - 276px) / 4);
+  display: inline-block;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.watch-description {
+  margin-top: 14px;
+  max-width: 276px;
+}
+
+.watch-name {
+  overflow: hidden;
+  color: var(--black, #141414);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  margin: 4px;
+}
+
+.watch-price {
+  color: rgba(20, 20, 20, 0.5);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.24px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.catalog-btn {
+  width: 122px;
+  height: 50px;
+  border-radius: 8px;
+  background: #1e2827;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Epilogue', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.catalog-btn:hover,
+.catalog-btn:focus {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background: #1e2827;
+}
+
+/* flip */
+
+.card-container {
+  background-color: transparent;
+  width: 276px;
+  height: 325px;
+  perspective: 1000px;
+}
+
+/* Style for the card that will flip on hover */
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover,
+.card:focus {
+  transform: rotateY(180deg);
+}
+/* Style for the front and back of the card */
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* Style for the front of the card */
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the back of the card */
+.back {
+  border-radius: 8px;
+  background: #1e2827;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  padding: 30px 26px;
+  border-radius: 8px;
+  color: white;
+  flex-direction: column;
+}
+
+.back-card,
+.back-card-item {
+  width: auto;
+}
+
+.back-card-description {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.back-card-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  color: #ffffff80;
+  margin-bottom: 16px;
+}
+
+.back-card-title {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.back-card-list {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  color: #ffffff80;
+  margin-bottom: 16px;
+}
+
+/* modal */
+.form-close-icon {
+  color: black;
+}
+
+.close-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0);
+  will-change: transform;
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-button:active {
+  transform: rotate(90deg);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-buy-now {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+.modal-pop-up {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1073px;
+  background-color: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px 20px 40px 20px;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.form-align {
+  width: 100%;
+}
+
+.modal-second {
+  width: 100%;
+}
+
+.modal-first {
+  margin-top: 26;
+  margin-bottom: 40px;
+}
+
+.modal-img {
+  display: flex;
+}
+.buy-now-form {
+  font-family: 'Epilogue', sans-serif;
+}
+
+.label-form {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  display: block;
+  width: 100%;
+}
+
+.form-input {
+  display: flex;
+  padding: 12px 16px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid rgba(20, 20, 20, 0.5);
+  width: 100%;
+  height: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.32px;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+.form-textarea {
+  resize: none;
+  height: 170px;
+}
+
+.send-form-button {
+  border-radius: 8px;
+  background: var(--dark-green, #1e2827);
+  color: white;
+  padding: 17px 35px;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.form-text-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: rgba(20, 20, 20, 0.5);
+}
+
+.modal-link-policy {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .catalog-container {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .watch-list {
+    gap: 40px 32px;
+  }
+
+  .modal-pop-up {
+    display: flex;
+    height: auto;
+  }
+
+  .form-align {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile-hidden.watch-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watch-list {
+    gap: 64px 24px;
+  }
+  .catalog-container {
+    max-width: 1240px;
+  }
+
+  .modal-pop-up {
+    max-width: 904px;
+  }
+}
