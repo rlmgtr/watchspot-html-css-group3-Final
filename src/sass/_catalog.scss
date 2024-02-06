@@ -200,6 +200,11 @@ img {
 }
 
 /* modal */
+
+.modal-container {
+  padding: 66px 20px 40px 20px;
+}
+
 .form-close-icon {
   color: black;
 }
@@ -245,6 +250,7 @@ img {
 }
 
 .modal-pop-up {
+  box-sizing: border-box;
   position: fixed;
   display: block;
   top: 50%;
@@ -256,7 +262,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px 20px 40px 20px;
+  padding: 40px 20px 22px;
   font-family: 'Epilogue', sans-serif;
 }
 
@@ -359,6 +365,10 @@ img {
     align-items: flex-start;
     gap: 40px;
   }
+
+  .form-input {
+    width: 368px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -376,5 +386,9 @@ img {
 
   .modal-pop-up {
     max-width: 904px;
+  }
+
+  .form-input {
+    width: 100%;
   }
 }
