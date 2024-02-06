@@ -1,12 +1,9 @@
-
 @import './common';
 @import './hero';
 @import './aboutus';
 @import './catalog';
 @import './feature';
 @import './sale';
-
-
 
 body {
   font-family: 'Epilogue', sans-serif;
@@ -192,7 +189,6 @@ header {
 @media screen and (max-width: 767px) {
   .watch-list {
     display: grid;
-    width: 100%;
+    width: 50%;
   }
 }
-
