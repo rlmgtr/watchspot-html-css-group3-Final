@@ -28,7 +28,7 @@
 .hero-section {
     background: var(--black-color);
     color: var(--white-color);
-    padding-top: 122px;
+    padding: 122px 5%;
  }
  
  .hero {
@@ -133,6 +133,10 @@
  }
  
  @media screen and (max-width: 767px) {
+
+   .hero-section {
+      padding-bottom: 7%;
+   }
     .hero-title {
        max-width: 653px;
        font-size: 38px;
