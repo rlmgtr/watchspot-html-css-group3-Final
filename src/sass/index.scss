@@ -46,6 +46,11 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-left: 5%;
+}
+
+.menu-header {
+  display: none;
 }
 
 .nav-link {
@@ -142,7 +147,7 @@ header {
     left: -100%; /* Change from right to left */
     background-color: #1e2827;
     transition: 0.5s;
-    z-index: 1;
+    z-index: 100000;
     display: flex;
     flex-direction: column;
     justify-content: start;

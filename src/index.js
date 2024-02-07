@@ -20,3 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   
+
+  const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-back',
+    }
+  });
