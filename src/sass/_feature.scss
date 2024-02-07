@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.sec-4 {
+  padding: 40px;
+  width: 50%;
+}
+.title {
+  font-family: Epilogue;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin: auto;
+}
+.watchs-list {
+  max-width: 100%;
+}
+
+.new-watch {
+  width: 1176;
+  height: 1100px;
+  margin: auto;
+  justify-content: center;
+  padding-top: 8px;
+}
+.sub-title {
+  padding: 6px 0px 0px 0px;
+  width: 40%;
+  height: 94px;
+  margin-top: 0;
+}
+.sub-title {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1e2827;
+}
+.watchs-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+  margin-top: 80px;
+}
+.green-bronze {
+  width: 576;
+  height: 422;
+}
+.features {
+  width: 1428px;
+  height: auto;
+  left: 0;
+  text-align: left;
+}
