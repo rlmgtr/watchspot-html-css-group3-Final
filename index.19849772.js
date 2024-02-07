@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".hamburger-button"),t=document.querySelector(".x-button"),n=document.getElementById("sideMenu");function c(){"-100%"!==n.style.left&&n.style.left?n.style.left="-100%":n.style.left="0"}e.addEventListener("click",(function(){c()})),t.addEventListener("click",(function(){c()}))}));
-//# sourceMappingURL=index.19849772.js.map
