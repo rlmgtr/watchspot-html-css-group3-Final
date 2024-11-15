@@ -13,11 +13,19 @@
     />
     <link rel="stylesheet" href="./sass/index.scss" />
     <!-- Swiper CSS -->
-      <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-    <script type="module" src="./index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/_aboutus.css" />
+    <link rel="stylesheet" href="css/_catalog.css" />
+    <link rel="stylesheet" href="css/_common.css" />
+    <link rel="stylesheet" href="css/_example.css" />
+    <link rel="stylesheet" href="css/_feature.css" />
+    <link rel="stylesheet" href="css/_footer.css" />
+    <link rel="stylesheet" href="css/_hero.css" />
+    <link rel="stylesheet" href="css/_sale.css" />
   </head>
   <body>
     <!-- header/tj -->
@@ -69,15 +77,42 @@
         </div>
       </nav>
     </header>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/hero.html"></include>
-    <include src="./partials/aboutus.html"></include>
-    <include src="./partials/catalog.html"></include>
-    <!-- <include src="./partials/feature.html"></include> -->
-<!--     <include src="./partials/sale.html"></include> -->
-<include src="./partials/feature.html"></include>
-<include src="./partials/sale.html"></include>
-<include src="./partials/footer.html"></include>
+
+    <!-- Containers for partials -->
+    <div id="hero"></div>
+    <div id="about-us"></div>
+    <div id="catalog"></div>
+    <div id="feature"></div>
+    <div id="sale"></div>
+    <div id="footer"></div>
+
+    <script>
+      // Load partials dynamically
+      const loadPartial = async (id, src) => {
+        try {
+          const response = await fetch(src);
+          if (!response.ok) throw new Error(`Failed to load ${src}`);
+          const html = await response.text();
+          document.getElementById(id).innerHTML = html;
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+      // Map of IDs to file paths
+      const partials = {
+        hero: "./partials/hero.html",
+        "about-us": "./partials/aboutus.html",
+        catalog: "./partials/catalog.html",
+        feature: "./partials/feature.html",
+        sale: "./partials/sale.html",
+        footer: "./partials/footer.html",
+      };
+
+      // Load each partial
+      Object.entries(partials).forEach(([id, src]) => loadPartial(id, src));
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
