@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".hamburger-button"),t=document.querySelector(".x-button"),n=document.getElementById("sideMenu");function o(){"-100%"!==n.style.left&&n.style.left?n.style.left="-100%":n.style.left="0"}e.addEventListener("click",(function(){o()})),t.addEventListener("click",(function(){o()}))}));new Swiper(".swiper-container",{slidesPerView:1,spaceBetween:10,loop:!0,keyboard:{enabled:!0,onlyInViewport:!1},navigation:{nextEl:".swiper-next",prevEl:".swiper-back"}});
-//# sourceMappingURL=index.3fd0e994.js.map
